@@ -194,6 +194,7 @@ class Connection
 
         $this->_config       = $config;
         $this->_eventManager = $eventManager;
+        error_log('------Connection::__construct()'  . json_encode(debug_backtrace(2)));
 
         if (isset($params['platform'])) {
             if (! $params['platform'] instanceof Platforms\AbstractPlatform) {
